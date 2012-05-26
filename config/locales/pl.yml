@@ -1,0 +1,5 @@
+pl:
+  spree:
+    admin:
+      taxons:
+        explain_page_id: "Wyświetlane będą tylko te strony, które mają kontekst <strong>taxon</strong>"

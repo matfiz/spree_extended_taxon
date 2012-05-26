@@ -1,0 +1,15 @@
+- if @taxon.icon.present?
+  = image_tag(@taxon.icon.url(:original))
+
+= f.field_container :visible do
+  = f.check_box :visible, :class => "text"
+  = f.label :visible, t('spree.admin.menus.visible')
+  %em= t("spree.admin.menus.explain_visible")
+ 
+- if Spree::Page.all.count > 0  
+  = f.field_container :page_id do
+    = f.label :page_id, t('spree.admin.menus.page_id')
+    %br
+    = collection_select(:menu,:page_id,Spree::Page.includes(:contents).where("spree_contents.context = ?", "taxon"), :id, :name, :prompt => t("spree.admin.menus.select_page_id"), :include_blank => true)
+    %em= t("spree.admin.taxons.explain_page_id").html_safe
+    = error_message_on :menu, :page_id
