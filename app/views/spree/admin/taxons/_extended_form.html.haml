@@ -1,5 +1,6 @@
 - if @taxon.icon.present?
   = image_tag(@taxon.icon.url(:original))
+  = link_to "Podgląd", seo_url(@taxon), :target => "_blank"
 
 = f.field_container :visible do
   = f.check_box :visible, :class => "text"
