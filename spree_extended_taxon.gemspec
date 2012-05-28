@@ -4,7 +4,7 @@ Gem::Specification.new do |s|
   s.name        = 'spree_extended_taxon'
   s.version     = '1.1.2'
   s.summary     = 'Adds some extended functionalities of taxonomiess'
-  s.description = 'TODO: Add (optional) gem description here'
+  s.description = 'Adds some extended functionalities of taxonomiess'
   s.required_ruby_version = '>= 1.8.7'
 
   s.author    = 'Grzegorz Brzezinka'
