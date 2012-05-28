@@ -14,3 +14,9 @@
     = collection_select(:menu,:page_id,Spree::Page.includes(:contents).where("spree_contents.context = ?", "taxon"), :id, :name, :prompt => t("spree.admin.menus.select_page_id"), :include_blank => true)
     %em= t("spree.admin.taxons.explain_page_id").html_safe
     = error_message_on :menu, :page_id
+    
+= f.field_container :bg_image do
+  - if @taxon.bg_image.present?
+    = image_tag(@taxon.bg_image.url(:normal))
+  = f.label :bg_image, t('spree.admin.taxons.bg_image')
+  = f.file_field :bg_image
