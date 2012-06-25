@@ -1,6 +1,6 @@
 Spree::Taxon.class_eval do
   
-  attr_accessible :page_id, :visible, :bg_image
+  attr_accessible :page_id, :visible, :bg_image, :page_redirect
   belongs_to :page
   
   has_attached_file :bg_image,
